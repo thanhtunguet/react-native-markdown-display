@@ -2,7 +2,7 @@
 import MarkdownIt from 'markdown-it';
 import Token from 'markdown-it/lib/token';
 import {ComponentType, ReactNode} from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, View, ReactElement} from 'react-native';
 
 export function getUniqueID(): string;
 export function openUrl(url: string): void;
@@ -89,6 +89,7 @@ export interface MarkdownProps {
   mergeStyle?: boolean;
   debugPrintTree?: boolean;
   onLinkPress?: (url: string) => boolean;
+  children?: string;
 }
 
 type MarkdownStatic = ComponentType<MarkdownProps>;
