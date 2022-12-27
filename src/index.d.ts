@@ -1,8 +1,13 @@
+declare module '*.md' {
+  const content: string;
+  export default content;
+}
+
 // tslint:disable:max-classes-per-file
 import MarkdownIt from 'markdown-it';
 import Token from 'markdown-it/lib/token';
 import {ComponentType, ReactNode} from 'react';
-import {StyleSheet, View, ReactElement} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 
 export function getUniqueID(): string;
 export function openUrl(url: string): void;
@@ -71,7 +76,7 @@ export class AstRenderer {
 export function parser(
   source: string,
   renderer: (node: ASTNode) => View,
-  parser: MarkdownParser,
+  markdownParser: MarkdownParser,
 ): any;
 
 export function stringToTokens(
