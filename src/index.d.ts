@@ -1,8 +1,3 @@
-declare module '*.md' {
-  const content: string;
-  export default content;
-}
-
 // tslint:disable:max-classes-per-file
 import MarkdownIt from 'markdown-it';
 import Token from 'markdown-it/lib/token';
